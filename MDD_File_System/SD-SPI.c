@@ -203,7 +203,9 @@ BYTE MDD_SDSPI_MediaDetect (void)
 		/* If the SPI module is not enabled, send manually the SEND_STATUS command */
 		#if (GetSystemClock() >= 25600000)
 			/* should only be here when GetSystemClock() >= 25600000 */
+		/*
 	    	response = SendMMCCmdManual(SEND_STATUS,0x0);
+		*/
 		#endif
 	}
 	else

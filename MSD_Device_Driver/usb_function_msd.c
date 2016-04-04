@@ -82,7 +82,7 @@ Change History:
 ********************************************************************/
  
 /** I N C L U D E S **************************************************/
-#include "USB/USB.h"
+#include "USB/usb.h"
 #include "HardwareProfile.h"
 #include "FSConfig.h"
 
