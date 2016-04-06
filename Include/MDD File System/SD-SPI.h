@@ -5,7 +5,7 @@
  ******************************************************************************
  * FileName:        SD-SPI.h
  * Dependencies:    GenericTypeDefs.h
- *                  FSconfig.h
+ *                  FSConfig.h
  *                  FSDefs.h
  * Processor:       PIC18/PIC24/dsPIC30/dsPIC33/PIC32
  * Compiler:        C18/C30/C32
@@ -38,7 +38,7 @@
 #define SDMMC_H
 
 #include "GenericTypeDefs.h"
-#include "FSconfig.h"
+#include "FSConfig.h"
 #include "MDD File System/FSDefs.h"
 
 

@@ -5,7 +5,7 @@
  ******************************************************************************
  * FileName:        TEMPLATEFILE.h
  * Dependencies:    GenericTypeDefs.h
- *					FSconfig.h
+ *					FSConfig.h
  *					FSDefs.h
  * Processor:       PIC18/PIC24/dsPIC30/dsPIC33
  * Compiler:        C18/C30
@@ -43,7 +43,7 @@
 
 
 #include "GenericTypeDefs.h"
-#include "FSconfig.h"
+#include "FSConfig.h"
 #include "FSDefs.h"
 
 #define FALSE	0

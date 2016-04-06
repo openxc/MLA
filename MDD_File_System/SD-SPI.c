@@ -166,7 +166,7 @@ static inline __attribute__((always_inline)) unsigned char SPICalutateBRG(unsign
     Determines whether an SD card is present
   Conditions:
     The MDD_MediaDetect function pointer must be configured
-    to point to this function in FSconfig.h
+    to point to this function in FSConfig.h
   Input:
     None
   Return Values:

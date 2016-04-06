@@ -5,7 +5,7 @@
  ******************************************************************************
  * FileName:        Internal Flash.h
  * Dependencies:    GenericTypeDefs.h
- *					FSconfig.h
+ *					FSConfig.h
  *					FSDefs.h
  * Processor:       PIC18/PIC24/dsPIC30/dsPIC33
  * Compiler:        C18/C30
@@ -54,7 +54,7 @@
 
 
 #include "GenericTypeDefs.h"
-#include "FSconfig.h"
+#include "FSConfig.h"
 #include "MDD File System/FSDefs.h"
 
 #define FALSE	0
@@ -119,8 +119,8 @@ BYTE MDD_IntFlash_WriteProtectState(void);
 //---------------------------------------------------------
 #if defined(__C30__)
     #if(MDD_INTERNAL_FLASH_TOTAL_DISK_SIZE % 2)
-        #warning "MSD volume overlaps flash erase page with firmware program memory.  Please change your FSconfig.h settings to ensure the MSD volume cannot share an erase page with the firmware."
-        //See code comments in FSconfig.h, and adjust the MDD_INTERNAL_FLASH_DRIVE_CAPACITY definition until the warning goes away.
+        #warning "MSD volume overlaps flash erase page with firmware program memory.  Please change your FSConfig.h settings to ensure the MSD volume cannot share an erase page with the firmware."
+        //See code comments in FSConfig.h, and adjust the MDD_INTERNAL_FLASH_DRIVE_CAPACITY definition until the warning goes away.
     #endif
 #endif
 
@@ -131,13 +131,13 @@ BYTE MDD_IntFlash_WriteProtectState(void);
 #endif
 
 #if (MEDIA_SECTOR_SIZE != 512)
-    #error "The current implementation of internal flash MDD only supports a media sector size of 512.  Please modify your selected value in the FSconfig.h file."
+    #error "The current implementation of internal flash MDD only supports a media sector size of 512.  Please modify your selected value in the FSConfig.h file."
 #endif
 
 #if (MDD_INTERNAL_FLASH_MAX_NUM_FILES_IN_ROOT != 16) && \
     (MDD_INTERNAL_FLASH_MAX_NUM_FILES_IN_ROOT != 32) && \
     (MDD_INTERNAL_FLASH_MAX_NUM_FILES_IN_ROOT != 48) && \
     (MDD_INTERNAL_FLASH_MAX_NUM_FILES_IN_ROOT != 64)
-    #error "Number of root file entries must be a multiple of 16.  Please adjust the definition in the FSconfig.h file."
+    #error "Number of root file entries must be a multiple of 16.  Please adjust the definition in the FSConfig.h file."
 #endif
 

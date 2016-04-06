@@ -6,7 +6,7 @@
  * FileName:        CF-PMP.h
  * Dependencies:    GenericTypeDefs.h
  *					FSDefs.h
- *                  FSconfig.h
+ *                  FSConfig.h
  * Processor:       PIC24/dsPIC30/dsPIC33
  * Compiler:        C30
  * Company:         Microchip Technology, Inc.
@@ -35,7 +35,7 @@
  *****************************************************************************/
 
 #include "GenericTypeDefs.h"
-#include "FSconfig.h"
+#include "FSConfig.h"
 #include "FSDefs.h"
 
 

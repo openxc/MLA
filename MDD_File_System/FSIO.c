@@ -84,14 +84,14 @@
 
 #ifdef USEREALTIMECLOCK
     #ifdef USERDEFINEDCLOCK
-        #error Please select only one timestamp clocking mode in FSconfig.h
+        #error Please select only one timestamp clocking mode in FSConfig.h
     #endif
     #ifdef INCREMENTTIMESTAMP
-        #error Please select only one timestamp clocking mode in FSconfig.h
+        #error Please select only one timestamp clocking mode in FSConfig.h
     #endif
 #elif defined USERDEFINEDCLOCK
     #ifdef INCREMENTTIMESTAMP
-        #error Please select only one timestamp clocking mode in FSconfig.h
+        #error Please select only one timestamp clocking mode in FSConfig.h
     #endif
 #endif
 /*****************************************************************************/
@@ -791,7 +791,7 @@ BYTE FILEget_next_cluster(FILEOBJ fo, DWORD n)
     CE_GOOD -       Disk mounted
     CE_INIT_ERROR - Initialization error has occured
     CE_UNSUPPORTED_SECTOR_SIZE - Media sector size bigger than
-                MEDIA_SECTOR_SIZE as defined in FSconfig.h.
+                MEDIA_SECTOR_SIZE as defined in FSConfig.h.
   Side Effects:
     None
   Description:
@@ -1473,7 +1473,7 @@ int FSCreateMBR (unsigned long firstSector, unsigned long numSectors)
 
     Therefore, the FORMAT_SECTORS_PER_CLUSTER macro may be used to 
     specify the exact cluster size (in multiples of sector size). This 
-    macro can be defined in FSconfig.h
+    macro can be defined in FSConfig.h
 
   Remarks:
     Only devices with a sector size of 512 bytes are supported by the 
@@ -2902,7 +2902,7 @@ void CacheTime (void)
   Summary:
     Manually set timestamp variables
   Conditions:
-    USERDEFINEDCLOCK macro defined in FSconfig.h.
+    USERDEFINEDCLOCK macro defined in FSConfig.h.
   Input:
     year -     The year (1980\-2107)
     month -   The month (1\-12)
@@ -3133,7 +3133,7 @@ DWORD FATfindEmptyCluster(FILEOBJ fo)
   Summary:
     Allows user to get the disk properties (size of disk, free space, etc)
   Conditions:
-    1) ALLOW_GET_DISK_PROPERTIES must be defined in FSconfig.h
+    1) ALLOW_GET_DISK_PROPERTIES must be defined in FSConfig.h
     2) a FS_DISK_PROPERTIES object must be created before the function is called
     3) the new_request member of the FS_DISK_PROPERTIES object must be set before
         calling the function for the first time.  This will start a new search.

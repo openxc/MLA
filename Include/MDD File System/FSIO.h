@@ -5,7 +5,7 @@
  ******************************************************************************
  * FileName:        FSIO.h
  * Dependencies:    GenericTypeDefs.h
- *                  FSconfig.h
+ *                  FSConfig.h
  *                  FSDefs.h
  *                  stddef.h
  * Processor:       PIC18/PIC24/dsPIC30/dsPIC33/PIC32
@@ -39,7 +39,7 @@
 #define  FS_DOT_H
 
 #include "GenericTypeDefs.h"
-#include "FSconfig.h"
+#include "FSConfig.h"
 #include "MDD File System/FSDefs.h" 
 #include "stddef.h"
 
@@ -800,7 +800,7 @@ int FSfeof( FSFILE * stream );
 
     Therefore, the FORMAT_SECTORS_PER_CLUSTER macro may be used to 
     specify the exact cluster size (in multiples of sector size). This 
-    macro can be defined in FSconfig.h
+    macro can be defined in FSConfig.h
 
   Remarks:
     Only devices with a sector size of 512 bytes are supported by the 
@@ -1071,7 +1071,7 @@ int FSrmdir (char * path, unsigned char rmsubdirs);
   Summary:
     Manually set timestamp variables
   Conditions:
-    USERDEFINEDCLOCK macro defined in FSconfig.h.
+    USERDEFINEDCLOCK macro defined in FSConfig.h.
   Input:
     year -     The year (1980\-2107)
     month -   The month (1\-12)
@@ -1436,7 +1436,7 @@ int FSCreateMBR (unsigned long firstSector, unsigned long numSectors);
   Summary:
     Allows user to get the disk properties (size of disk, free space, etc)
   Conditions:
-    1) ALLOW_GET_DISK_PROPERTIES must be defined in FSconfig.h
+    1) ALLOW_GET_DISK_PROPERTIES must be defined in FSConfig.h
     2) a FS_DISK_PROPERTIES object must be created before the function is called
     3) the new_request member of the FS_DISK_PROPERTIES object must be set before
         calling the function for the first time.  This will start a new search.
